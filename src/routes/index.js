@@ -3,7 +3,7 @@ const pool = require('../../db'); // Supondo que você tenha configurado a conex
 const router = express.Router();
 
 // Rota para buscar todos os registros da tabela 'add_on' relacionados com 'jogo'
-router.get('api/add_on/jogo', async (req, res) => {
+router.get('/add_on/jogo', async (req, res) => {
   try {
     const { rows } = await pool.query(`
       SELECT a.*, j.*
@@ -18,7 +18,7 @@ router.get('api/add_on/jogo', async (req, res) => {
 });
 
 // Rota para buscar um add-on específico pelo ID
-router.get('api/add_on/jogo/:id', async (req, res) => {
+router.get('/add_on/jogo/:id', async (req, res) => {
   const { id } = req.params;
   try {
     const { rows } = await pool.query('SELECT * FROM add_on WHERE id_add_on = $1', [id]);
@@ -34,7 +34,7 @@ router.get('api/add_on/jogo/:id', async (req, res) => {
 });
 
 // Rota para buscar todos os registros da tabela 'usuario' relacionados com 'jogo'
-router.get('api/usuario/jogo', async (req, res) => {
+router.get('/usuario/jogo', async (req, res) => {
   try {
     const { rows } = await pool.query(`
       SELECT u.*, j.*
@@ -50,7 +50,7 @@ router.get('api/usuario/jogo', async (req, res) => {
 
 
 // Rota para buscar um compra específico pelo ID
-router.get('api/usuario/jogo/:id', async (req, res) => {
+router.get('/usuario/jogo/:id', async (req, res) => {
   const { id } = req.params;
   try {
     const { rows } = await pool.query('SELECT * FROM usuario WHERE id_usuario = $1', [id]);
@@ -68,7 +68,7 @@ router.get('api/usuario/jogo/:id', async (req, res) => {
 
 
 // Rota para buscar todos os registros da tabela 'jogo' relacionados com 'compra'
-router.get('api/jogo/compra', async (req, res) => {
+router.get('/jogo/compra', async (req, res) => {
   try {
     const { rows } = await pool.query(`
       SELECT j.*, c.*
@@ -84,7 +84,7 @@ router.get('api/jogo/compra', async (req, res) => {
 
 
 // Rota para buscar um jogo específico pelo ID
-router.get('api/jogo/compra/:id', async (req, res) => {
+router.get('/jogo/compra/:id', async (req, res) => {
   const { id } = req.params;
   try {
     const { rows: jogoRows } = await pool.query('SELECT * FROM jogo WHERE id_jogo = $1', [id]);
