@@ -2,11 +2,11 @@ const { Pool } = require('pg');
 
 // Configuração da conexão
 const pool = new Pool({
-  user: 'postgres',           // Substitua pelo seu usuário do PostgreSQL
-  host: 'localhost',             // Substitua pelo host do seu servidor PostgreSQL
-  database: 'fichenet',     // Substitua pelo nome do seu banco de dados
-  password: 'ola123',         // Substitua pela sua senha do PostgreSQL
-  port: 5432,                    // Porta padrão do PostgreSQL
+  user: 'bruh',                     // Usuário do banco de dados PostgreSQL fornecido pelo Render.com
+  host: 'dpg-cptatgmehbks73f238ig-a', // Host do banco de dados PostgreSQL fornecido pelo Render.com
+  database: 'fichenet',             // Nome do banco de dados PostgreSQL criado no Render.com
+  password: 'gTgQr2346aBFkc0UGTRVY3oXetdzZOmW',  // Senha do banco de dados PostgreSQL fornecida pelo Render.com
+  port: 5432,                       // Porta padrão do PostgreSQL
 });
 
 // Teste a conexão
