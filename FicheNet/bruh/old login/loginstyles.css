@@ -1,0 +1,85 @@
+@import url('https://fonts.cdnfonts.com/css/metropolis-2');
+
+body {
+    font-family: 'Metropolis', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background: url('img/bgnet.jpg') repeat;
+    background-size: 10%;
+}
+
+.main-container {
+    display: flex;
+    align-items: flex-start;
+    background-color: rgba(28, 28, 28, 1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 80%);
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    color: white;
+}
+
+.left-container h1 {
+    margin: 20px 0;
+}
+
+.logo-image, .example-image {
+    max-width: 150px;
+    border-radius: 8px;
+}
+
+.login-container {
+    background-color: rgba(28, 28, 28, 1);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    margin-top: 15px;
+    color: red;
+}
